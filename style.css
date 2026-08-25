@@ -1,0 +1,231 @@
+/* =====================================================
+   VICTORY ARENA SPORTS CLUB — Stylesheet
+   Palette: Deep Navy + Brushed Gold + Ivory (luxury club look)
+   Used by: index.html, about.html, fees.html, contact.html
+   ===================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --navy-deep: #0b1d33;   /* primary dark - header, footer, hero */
+  --navy-mid: #142c4a;    /* secondary dark - nav bar */
+  --gold: #c6a15b;        /* accent - buttons, prices, active link */
+  --gold-light: #e2c98a;  /* accent hover / soft highlight */
+  --ivory: #f6f1e7;       /* page background */
+  --white: #ffffff;       /* card background */
+  --text-dark: #20242c;   /* body headings */
+  --text-muted: #5c6270;  /* paragraph text */
+  --shadow: rgba(11, 29, 51, 0.14);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--ivory);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: var(--navy-deep);
+  margin: 0 0 12px;
+}
+
+p { margin: 0 0 12px; color: var(--text-muted); }
+
+/* ---------- Header ---------- */
+header {
+  background: var(--navy-deep);
+  color: var(--ivory);
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  letter-spacing: 1px;
+  color: var(--ivory);
+}
+
+.logo span,
+header h1 { color: var(--gold); }
+
+header h1 { font-size: 28px; }
+header p { color: var(--gold-light); margin: 4px 0 0; }
+
+/* ---------- Navigation ---------- */
+nav {
+  background: var(--navy-mid);
+  padding: 14px;
+  text-align: center;
+}
+
+nav a {
+  color: var(--ivory);
+  text-decoration: none;
+  margin: 0 16px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover,
+nav a.active { color: var(--gold); }
+
+/* ---------- Page title band (About / Fees / Contact) ---------- */
+.page-title {
+  background: var(--navy-deep);
+  color: var(--ivory);
+  text-align: center;
+  padding: 40px 20px;
+}
+.page-title h1 { color: var(--ivory); }
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.about-image {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--shadow);
+  margin-bottom: 20px;
+}
+
+/* ---------- Cards (About / Fees / Home features) ---------- */
+.cards,
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid #e9e2d3;
+  border-radius: 12px;
+  padding: 28px 22px;
+  width: 250px;
+  box-shadow: 0 8px 20px var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.card h3 { font-size: 18px; margin-bottom: 8px; }
+.card-icon { font-size: 34px; margin-bottom: 8px; }
+
+.price {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  color: var(--gold);
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+/* ---------- Hero (index.html) ---------- */
+.hero {
+  background: linear-gradient(135deg, var(--navy-deep), var(--navy-mid));
+  color: var(--ivory);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.small-heading {
+  color: var(--gold);
+  letter-spacing: 2px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.hero h2 { color: var(--ivory); font-size: 34px; }
+.hero p { color: #d7dbe4; }
+.hero strong { color: var(--gold); }
+.hero em { color: var(--gold-light); }
+
+.button,
+button,
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy-deep);
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.button:hover,
+button:hover,
+.btn:hover { background: var(--gold-light); }
+
+/* ---------- Video section (index.html) ---------- */
+.video-section {
+  background: var(--white);
+  text-align: center;
+  padding: 50px 20px;
+}
+.video-section video {
+  max-width: 800px;
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 16px;
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.section-title { font-size: 30px; }
+
+/* ---------- Contact form ---------- */
+.contact-form {
+  background: var(--white);
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--shadow);
+  text-align: left;
+}
+
+.contact-form h2 { text-align: center; }
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #d9d2c0;
+  border-radius: 8px;
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  color: var(--text-dark);
+  background: var(--ivory);
+}
+
+.contact-form button { width: 100%; }
+
+/* ---------- Footer ---------- */
+footer {
+  background: var(--navy-deep);
+  color: var(--gold-light);
+  text-align: center;
+  padding: 18px;
+  font-size: 14px;
+  margin-top: 30px;
+}
